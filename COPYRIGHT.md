@@ -1,0 +1,1 @@
+This project is dual licenced under the [Apache-2.0](LICENSE-APACHE) and the [MIT](LICENSE-MIT) license, at your discretion

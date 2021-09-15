@@ -1,0 +1,15 @@
+[package]
+name = "espeakng-sys"
+version = "0.1.0"
+edition = "2018"
+authors = ["Tobias de Bruijn <t.debruijn@array21.dev>"]
+description = "Raw FFI bindings to eSpeak NG"
+license = "Apache-2.0 OR MIT"
+keywords = ["FFI", "espeak", "espeak-ng", "audio", "tts", "speech"]
+categories = ["external-ffi-bindings", "api-bindings"]
+repository = "https://github.com/Better-Player/espeakng-sys"
+homepage = "https://github.com/Better-Player/espeakng-sys"
+readme = "REAMDE.md"
+
+[build-dependencies]
+bindgen = "0.59.1"
