@@ -1,4 +1,5 @@
 # eSpeak NG bindings for Rust
+![Crates.io](https://img.shields.io/crates/v/espeakng-sys?style=flat)  
 FFI bindings to the C library eSpeak NG for Rust
 
 ## Dependencies
