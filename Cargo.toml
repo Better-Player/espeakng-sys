@@ -11,5 +11,6 @@ repository = "https://github.com/Better-Player/espeakng-sys"
 homepage = "https://github.com/Better-Player/espeakng-sys"
 readme = "README.md"
 
-[build-dependencies]
-bindgen = "0.59.1"
+[build-dependencies.bindgen]
+version = "0.59.1"
+default-features = false
