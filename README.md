@@ -2,6 +2,8 @@
 ![Crates.io](https://img.shields.io/crates/v/espeakng-sys?style=flat)  
 FFI bindings to the C library eSpeak NG for Rust
 
+Current eSpeak NG version: 1.51
+
 ## Dependencies
 - [eSpeak NG](https://github.com/espeak-ng/espeak-ng/blob/master/docs/building.md)
 
@@ -162,5 +164,6 @@ impl<T> PoisonlessLock<T> for Mutex<T> {
 ```
 
 ## License
-`espeakng-sys` is dual licensed under the Apache-2.0 and MIT license, at your discretion
+`espeakng-sys` is dual licensed under the Apache-2.0 and MIT license, at your discretion.
+Do note though, `espeak-ng` itself is licensed under the [GPL](http://www.gnu.org/licenses)
 

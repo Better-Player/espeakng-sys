@@ -85,7 +85,7 @@ typedef struct
   void (*outputUnvoiced)(short sample);
 } espeak_ng_OUTPUT_HOOKS;
 
-/* eSpeak NG 1.49.0 */
+/* eSpeak NG 1.51.0 */
 
 typedef struct espeak_ng_ERROR_CONTEXT_ *espeak_ng_ERROR_CONTEXT;
 
