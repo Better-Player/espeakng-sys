@@ -9,12 +9,13 @@ static STATIC_LIBRARIES: &[&str] = &[
     "pthread",
     "pcaudio",
     "asound",
+    "libc",
     "espeak-ng",
 ];
 
 fn add_arch(arch: &str) {
     println!("cargo:rustc-link-search=native=/usr/lib/{arch}");
-    println!("cargo:rustc-link-search=native=/usr/lib/gcc/{arch}/9");
+    println!("cargo:rustc-link-search=native=/usr/lib/gcc/{arch}/11");
 }
 
 fn add_search_paths() {
