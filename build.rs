@@ -6,10 +6,10 @@ use std::path::PathBuf;
 static STATIC_LIBRARIES: &[&str] = &[
     "stdc++",
     "sonic",
-    "pthread",
+    // "pthread",
     "pcaudio",
     "asound",
-    "libc",
+    // "libc",
     "espeak-ng",
 ];
 
