@@ -12,16 +12,21 @@ static STATIC_LIBRARIES: &[&str] = &[
     "espeak-ng",
 ];
 
+fn add_arch(arch: &str) {
+    println!("cargo:rustc-link-search=native=/usr/lib/{arch}");
+    println!("cargo:rustc-link-search=native=/usr/lib/gcc/{arch}/11");
+    println!("cargo:rustc-link-search=native=/usr/lib/gcc/{arch}/10");
+    println!("cargo:rustc-link-search=native=/usr/lib/gcc/{arch}/9");
+}
+
 fn add_search_paths() {
     let target_arch = std::env::var("CARGO_CFG_TARGET_ARCH").unwrap();
     match target_arch.as_str() {
         "aarch64" => {
-            println!("cargo:rustc-link-search=native=/usr/lib/aarch64-linux-gnu");
-            println!("cargo:rustc-link-search=native=/usr/lib/gcc/aarch64-linux-gnu/11");
+            add_arch("aarch64-linux-gnu");
         }
         "x86" | "x86_64" => {
-            println!("cargo:rustc-link-search=native=/usr/lib/x86_64-linux-gnu");
-            println!("cargo:rustc-link-search=native=/usr/lib/gcc/x86_64-linux-gnu/11");
+            add_arch("x86_64-linux-gnu");
         }
         _ => panic!("Unsupported architecture: {}", target_arch),
     }
