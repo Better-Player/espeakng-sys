@@ -15,6 +15,7 @@ static STATIC_LIBRARIES: &[&str] = &[
 
 fn add_arch(arch: &str) {
     println!("cargo:rustc-link-search=native=/usr/lib/{arch}");
+    println!("cargo:rustc-link-search=native=/usr/lib/gcc/{arch}/10");
     println!("cargo:rustc-link-search=native=/usr/lib/gcc/{arch}/11");
 }
 
