@@ -163,16 +163,15 @@ impl<T> PoisonlessLock<T> for Mutex<T> {
 
 ```
 
-## Crate features
+## Common issues
+1. **```'a `libclang` shared library is not loaded on this thread'```**
 
-The `clang-runtime` features enables the `bindgen`'s `runtime` feature, which in turn is forwarded
-to the `runtime` feature in the [`clang-sys`](https://github.com/KyleMayes/clang-sys#dependencies) crate. 
-This enables dynamic linking of `libclang` at runtime. This
-feature flag is present to provide compatibility with other crates that require the `bindgen/runtime` feature.
-If you get the error ```'a `libclang` shared library is not loaded on this thread'```, try
-enabling the `clang-runtime` feature.
+    Enable the `clang-runtime` feature.
+
+2. **(Flatpack) ```/usr/lib/sdk/llvm16/lib/libclang.so: undefined reference to `LLVMInitializeWebAssemblyAsmPrinter@LLVM_16'```**
+
+    Enable the `clang-runtime` feature.
 
 ## License
 `espeakng-sys` is dual licensed under the Apache-2.0 and MIT license, at your discretion.
 Do note though, `espeak-ng` itself is licensed under the [GPL](http://www.gnu.org/licenses)
-
