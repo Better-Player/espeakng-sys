@@ -16,5 +16,5 @@ default = []
 clang-runtime = ["bindgen/runtime"]
 
 [build-dependencies.bindgen]
-version = "0.62.0"
+version = "0.71.1"
 default-features = false
